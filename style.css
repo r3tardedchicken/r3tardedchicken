@@ -7,15 +7,14 @@
 body {
   background: black;
   color: white;
-  font-family: Arial, sans-serif;
+  font-family: 'Great Vibes', cursive;
   overflow-x: hidden;
 }
 
 /* Background video */
 #bgVideo {
   position: fixed;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -29,63 +28,64 @@ body {
   right: 20px;
   font-size: 24px;
   background: rgba(0,0,0,0.6);
-  border: none;
+  border: 1px solid white;
   color: white;
   padding: 10px;
   cursor: pointer;
   z-index: 10;
 }
 
-/* Content */
+/* Main content */
 .content {
   min-height: 100vh;
-  padding: 120px 20px;
+  padding: 140px 20px;
   text-align: center;
-  background: rgba(0,0,0,0.4);
+  background: rgba(0,0,0,0.45);
 }
 
-/* Title font */
 .title {
-  font-family: 'Great Vibes', cursive;
   font-size: 96px;
   animation: fadeSlide 2s ease;
 }
 
-/* Herzog vibe */
-.subtitle {
-  margin-top: 20px;
-  font-size: 20px;
-  opacity: 0.85;
-}
-
-.text {
-  margin: 40px auto;
-  max-width: 700px;
-  font-size: 18px;
-  line-height: 1.6;
-}
-
-/* Dex button */
-.dex-btn {
-  display: inline-block;
-  margin-top: 30px;
-  padding: 14px 30px;
+/* Highlighted text box */
+.highlight-box {
+  margin: 60px auto;
+  padding: 40px;
+  max-width: 900px;
   border: 2px solid white;
-  color: white;
+  background: rgba(0,0,0,0.6);
+  font-size: 30px;
+  line-height: 1.5;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.btn {
+  padding: 14px 32px;
+  border: 2px solid white;
   text-decoration: none;
-  font-size: 18px;
+  color: white;
+  font-size: 26px;
   transition: all 0.3s ease;
 }
 
-.dex-btn:hover {
+.btn:hover {
   background: white;
   color: black;
 }
 
 /* Contract */
 .contract {
-  margin-top: 40px;
-  font-size: 14px;
+  margin-top: 50px;
+  font-size: 20px;
   opacity: 0.7;
   word-break: break-all;
 }
@@ -94,15 +94,43 @@ body {
 .meme-strip {
   display: flex;
   gap: 20px;
-  padding: 40px;
+  padding: 60px 40px;
   overflow-x: auto;
   background: black;
 }
 
 .meme-strip video {
-  width: 300px;
-  height: 170px;
+  width: 320px;
+  height: 180px;
   object-fit: cover;
+  border: 2px solid white;
+}
+
+/* Text sections */
+.section {
+  margin: 120px auto;
+  padding: 50px;
+  max-width: 900px;
+  border: 2px solid white;
+  background: rgba(0,0,0,0.6);
+  text-align: center;
+  font-size: 32px;
+  line-height: 1.5;
+}
+
+/* YouTube section */
+.video-section {
+  padding: 100px 20px;
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: black;
+}
+
+.video-section iframe {
+  width: 420px;
+  height: 236px;
   border: 2px solid white;
 }
 
@@ -110,7 +138,7 @@ body {
 @keyframes fadeSlide {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(40px);
   }
   to {
     opacity: 1;
