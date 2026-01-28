@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Background video */
+#bgVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Sound button */
+#soundToggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  background: rgba(0,0,0,0.6);
+  border: none;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* Content */
+.content {
+  min-height: 100vh;
+  padding: 120px 20px;
+  text-align: center;
+  background: rgba(0,0,0,0.4);
+}
+
+/* Title font */
+.title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 96px;
+  animation: fadeSlide 2s ease;
+}
+
+/* Herzog vibe */
+.subtitle {
+  margin-top: 20px;
+  font-size: 20px;
+  opacity: 0.85;
+}
+
+.text {
+  margin: 40px auto;
+  max-width: 700px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Dex button */
+.dex-btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 14px 30px;
+  border: 2px solid white;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.dex-btn:hover {
+  background: white;
+  color: black;
+}
+
+/* Contract */
+.contract {
+  margin-top: 40px;
+  font-size: 14px;
+  opacity: 0.7;
+  word-break: break-all;
+}
+
+/* Meme strip */
+.meme-strip {
+  display: flex;
+  gap: 20px;
+  padding: 40px;
+  overflow-x: auto;
+  background: black;
+}
+
+.meme-strip video {
+  width: 300px;
+  height: 170px;
+  object-fit: cover;
+  border: 2px solid white;
+}
+
+/* Animations */
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
